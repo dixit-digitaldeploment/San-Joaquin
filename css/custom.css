@@ -3207,6 +3207,277 @@ p.date {
   }
 }
 
+.calendar_wrap {
+  padding-bottom: 40px;
+}
+.calendar_wrap .calendar-filter-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin-bottom: 32px;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field.month {
+  gap: 24px;
+  padding-top: 4px;
+  flex-grow: 0;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .search-label,
+.calendar_wrap .calendar-filter-section .dropdown-field .month-label {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.21em;
+  text-align: left;
+  border: 0;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .search-label::-moz-placeholder, .calendar_wrap .calendar-filter-section .dropdown-field .month-label::-moz-placeholder {
+  color: #000 !important;
+  opacity: 1 !important;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .search-label::placeholder,
+.calendar_wrap .calendar-filter-section .dropdown-field .month-label::placeholder {
+  color: #000 !important;
+  opacity: 1 !important;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .search-label::-webkit-input-placeholder,
+.calendar_wrap .calendar-filter-section .dropdown-field .month-label::-webkit-input-placeholder {
+  color: #000 !important;
+  opacity: 1 !important;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .search-label::-moz-placeholder,
+.calendar_wrap .calendar-filter-section .dropdown-field .month-label::-moz-placeholder {
+  color: #000 !important;
+  opacity: 1 !important;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .search-label:-ms-input-placeholder,
+.calendar_wrap .calendar-filter-section .dropdown-field .month-label:-ms-input-placeholder {
+  color: #000 !important;
+  opacity: 1 !important;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.calendar_wrap .calendar-filter-section .dropdown-field .search-label::-ms-input-placeholder,
+.calendar_wrap .calendar-filter-section .dropdown-field .month-label::-ms-input-placeholder {
+  color: #000 !important;
+  opacity: 1 !important;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.calendar_wrap .calendar-filter-section .find-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-right: 20px;
+}
+.calendar_wrap .calendar-filter-section .find-btn a {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 16px;
+  background: #14213F;
+  text-decoration: none;
+}
+.calendar_wrap .calendar-filter-section .hide_filter {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-right: 20px;
+}
+.calendar_wrap .calendar-filter-section .hide_filter a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+}
+.calendar_wrap .calendar-filter-section .month_list_view select {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  border: 0;
+  min-width: 100px;
+}
+.calendar_wrap .calendar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+.calendar_wrap .calendar-nav .nav-arrows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.calendar_wrap .calendar-nav .nav-arrows a.nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 8px 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.calendar_wrap .calendar-nav .calendar-labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.calendar_wrap .calendar-nav .calendar-labels a.ct-month {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  background: #F5F5F5;
+  font-weight: 700;
+  margin-right: 24px;
+}
+.calendar_wrap .calendar-nav .calendar-labels button.month-btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0 8px;
+}
+.calendar_wrap .list_wrap {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 80px auto;
+  margin-bottom: 16px;
+}
+.calendar_wrap .list_wrap .evt_date {
+  background: #ECAF3B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  line-height: 30px;
+}
+.calendar_wrap .list_wrap .evt_date span {
+  font-size: 36px;
+  font-weight: 800;
+}
+.calendar_wrap .list_wrap .evt_info {
+  padding: 16px;
+}
+.calendar_wrap .list_wrap .evt_info a {
+  text-decoration: none;
+}
+.calendar_wrap .list_wrap .evt_info span {
+  color: #555554;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+.calendar_wrap .list_wrap .evt_info p.time {
+  margin-bottom: 10px;
+}
+.calendar_wrap .list_wrap .evt_info:hover h3 {
+  text-decoration: underline;
+  color: #14213F;
+}
+.calendar_wrap .cal-row {
+  margin-top: 40px;
+}
+.calendar_wrap .cal_filter .filter-title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.calendar_wrap .cal_filter .reset_link a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+.calendar_wrap .cal_filter .reset_link a img {
+  margin-right: 6px;
+}
+.calendar_wrap .nav_event {
+  border-top: 1px solid #000;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+.calendar_wrap .nav_event a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  font-family: "DM Sans", sans-serif;
+}
+.calendar_wrap .nav_event a img {
+  margin-right: 15px;
+}
+.calendar_wrap .nav_event a.next img {
+  margin-left: 15px;
+  margin-right: 0px;
+}
+@media (max-width: 768px) {
+  .calendar_wrap .calendar-filter-section {
+    flex-wrap: wrap;
+  }
+  .calendar_wrap .calendar-filter-section .dropdown-field {
+    width: 100%;
+  }
+  .calendar_wrap .calendar-nav {
+    flex-wrap: wrap;
+  }
+  .calendar_wrap .calendar-nav .calendar-labels a.ct-month {
+    margin-right: 10px;
+  }
+  .calendar_wrap .cal_list_info {
+    padding-top: 30px;
+  }
+  .calendar_wrap .nav_event {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
 .gray,
 .grey {
   background-color: #08164E;
