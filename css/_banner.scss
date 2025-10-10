@@ -22,7 +22,7 @@
         }
     }
     .carousel-item {
-        >img {
+        > img {
             width: 100%;
             max-height: calc(100vh - 170px);
             height: 600px;
@@ -54,26 +54,29 @@
         left: 0;
         right: 0;
         text-align: left;
+        top: 50%;
+        transform: translateY(-50%);
         h2 {
             color: #fff;
             text-shadow: none;
             margin-bottom: 15px;
-            font-size: 65px;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            span {
-                font-size: 36px;
-                font-weight: normal;
-                display: block;
-            }
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            margin-bottom: 16px;
+            // span {
+            //     font-size: 36px;
+            //     font-weight: normal;
+            //     display: block;
+            // }
         }
         p {
-            font-size: 20px;
-            color: $primary;
-            max-width: 700px;
-            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
-            font-weight: 500;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            color: $white;
         }
         .btn_sm {
             margin-top: 15px;
@@ -85,8 +88,8 @@
             }
         }
         @media (min-width: 768px) {
-            bottom: 40px;
-            top: auto;
+            // bottom: 40px;
+            // top: auto;
         }
     }
     .carousel-control-next,
@@ -94,7 +97,7 @@
         width: 46px;
         height: 50px;
         border-radius: 0px 5px 5px 0px;
-        background: rgba(255, 255, 255, 0.50);
+        background: rgba(255, 255, 255, 0.5);
         top: 50%;
         opacity: 1;
         transform: translateY(-50%);
@@ -162,6 +165,9 @@
 }
 
 .banner-buttons {
+    background: var(--Grayscale-Gray-50, #f8f8f8);
+    position: relative;
+    z-index: 2;
     a {
         text-decoration: none;
         &:hover {
@@ -169,24 +175,29 @@
         }
     }
     .btn_card {
-        padding: 32px 24px;
+        padding: 16px;
+        display: flex;
+        border: 1px solid var(--Grayscale-Gray-400, #a0a0a0);
+        background: var(--Grayscale-White, #fff);
+        gap: 24px;
+        transform: translateY(-50px);
         .btn_icon {
-            width: 60px;
-            height: 60px;
-            min-width: 60px;
-            min-height: 60px;
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 100px;
             background: $white;
-            margin-bottom: 16px;
-            margin-right: 16px;
+            // margin-bottom: 16px;
+            // margin-right: 16px;
             @include md {
-                width: 30px;
-                height: 30px;
-                min-width: 30px;
-                min-height: 30px;
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+                min-height: 24px;
             }
         }
         .btn_header {
@@ -198,12 +209,16 @@
             font-family: $primary-font;
         }
         p {
-            color: $white;
+            color: $black;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            margin: 0;
         }
         &.red {
             background: #ab1c21;
             &:hover {
-                background: #9B1A1F;
+                background: #9b1a1f;
             }
         }
         &.green {
@@ -221,7 +236,7 @@
         &.blue {
             background: #005598;
             &:hover {
-                background: #014275
+                background: #014275;
             }
         }
     }
@@ -248,7 +263,7 @@
 @media (max-width: 767px) {
     .main_banner {
         .carousel-item {
-            >img {
+            > img {
                 height: 400px;
                 object-fit: cover;
                 z-index: 0;
@@ -277,7 +292,7 @@
     }
 }
 
-@media (max-width:1199.9px) {
+@media (max-width: 1199.9px) {
     .main_banner {
         padding-top: 100px;
         flex-direction: column;
@@ -289,8 +304,8 @@
     }
 }
 
-@media (min-width:768px) and (max-width:1200px) {
-    .main_banner .carousel-item>img {
+@media (min-width: 768px) and (max-width: 1200px) {
+    .main_banner .carousel-item > img {
         min-height: 500px;
     }
 }
