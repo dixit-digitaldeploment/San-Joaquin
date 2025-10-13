@@ -828,6 +828,9 @@
     @include tab {
       width: 50%;
     }
+    &:has(.list){
+      width: 100% !important;
+    }
   }
 }
 
@@ -898,6 +901,30 @@ p.date {
     .news_category {
       top: 0px;
       bottom: auto;
+    }
+  }
+  &.list {
+    > a {
+      display: flex;
+      .newsimg {
+        max-width: 230px;
+        img {
+          aspect-ratio: 1/1;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    @include md {
+      > a {
+        display: contents;
+        .newsimg {
+          max-width: unset;
+          img {
+            aspect-ratio: 282 / 212;
+          }
+        }
+      }
     }
   }
 }
