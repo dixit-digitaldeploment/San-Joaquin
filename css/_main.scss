@@ -784,8 +784,8 @@
 }
 
 .newsArea {
-  padding: 40px 0px;
-  background: #f5f5f5;
+  padding: 80px 0px;
+  // background: #f5f5f5;
 }
 
 .news_category {
@@ -836,8 +836,7 @@
   img {
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 282/212;
-    border-radius: 20px 0 0 0;
+    aspect-ratio: 3/2;
   }
 }
 
@@ -855,12 +854,32 @@ p.date {
   height: 100%;
   background: $white;
   position: relative;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid #a0a0a0;
   h3 {
-    font-size: 21px;
-    color: $black;
+    font-size: 24px;
+    color: #202020;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .cat-list {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 16px;
+    .news_category {
+      padding: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      border-radius: 16px;
+      background: #f0f0f0;
+      line-height: 1;
+      margin: 0;
+    }
+  }
+  .date {
+    font-size: 14px;
+    font-weight: 400;
+    color: #202020;
+    margin: 0;
   }
   > a {
     text-decoration: none;
@@ -884,7 +903,7 @@ p.date {
 }
 
 .newsBody {
-  padding: 12px 16px;
+  padding: 16px;
   padding-top: 6px;
 }
 
@@ -948,21 +967,29 @@ p.date {
   .filterwrap {
     form {
       display: grid;
-      grid-template-columns: 230px 230px 230px;
+      grid-template-columns: 345px 345px 345px 1fr;
       align-items: end;
       grid-column-gap: 10px;
+
+     @media screen and (max-width:1200px) {
+        grid-template-columns: 1fr 1fr 1fr 150px;
+      }
       @include md {
         grid-template-columns: auto;
       }
-      @include tab {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
       select {
-        min-width: 110px;
+        min-width: 100%;
       }
       .col-two {
         margin-left: 0px;
       }
+    }
+    .reset {
+      margin-bottom: 5px;
+      padding: 4px 12px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #202020;
     }
   }
   @include md {
@@ -981,8 +1008,10 @@ p.date {
 
 .nsRight {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  // flex-direction: column;
+  align-items: flex-end;
+  padding-top: 16px;
+  gap: 24px;
   .newsSort {
     width: 230px;
     margin-left: auto;
@@ -990,6 +1019,10 @@ p.date {
     @include md {
       width: 100%;
     }
+  }
+  @include md {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

@@ -138,23 +138,25 @@
 }
 
 .main_breadcrumb {
-    padding-top: 10px;
+    // padding-top: 10px;
     position: relative;
+    border-bottom: 1px solid #A0A0A0;
+
     .breadcrumb {
         background: none;
         margin: 0px;
         padding-left: 00px;
         padding-right: 0px;
         font-size: 14px;
-        padding-top: 6px;
-        padding-bottom: 6px;
+        padding-top: 4px;
+        padding-bottom: 4px;
         align-items: center;
         text-transform: capitalize;
-        font-weight: 500;
+        font-weight: 300;
         li {}
         a {
             color: $black;
-            font-weight: 500;
+            font-weight: 300;
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
@@ -172,13 +174,12 @@
     .breadcrumb-item+.breadcrumb-item::before {
         content: "";
         background: url(../img/angle-right.svg);
-        background-repeat: repeat;
         background-repeat: no-repeat;
         margin-top: 4px;
         margin-right: 8px;
         margin-left: 5px;
-        padding-right: 5px;
         padding-left: 5px;
+        background-size: 14px;
     }
     .breadcrumb-item+.breadcrumb-item {
         padding-left: 3px;
@@ -197,11 +198,14 @@
     padding-bottom: 40px;
     position: relative;
     flex-direction: column;
+    background: #F8F8F8;
     h1 {
         position: relative;
         z-index: 9;
         display: table;
         margin-bottom: 5px;
+        font-size: 40px;
+        font-weight: 700;
     }
 }
 

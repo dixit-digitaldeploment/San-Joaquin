@@ -195,8 +195,8 @@ video {
 .form-control {
     min-height: 40px;
     background-color: $white;
-    border: 1px solid #000;
-    border-radius: 5px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
 }
 
 .no-margin {
@@ -216,7 +216,7 @@ select {
     background-repeat: no-repeat;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-position: top 14px right 12px;
+    background-position: top 10px right 12px;
     min-width: 130px;
     background-size: 18px;
     color: $black;
@@ -226,6 +226,42 @@ select {
         color: #555554;
         cursor: pointer;
     }
+}
+
+.toggle-buttons {
+    display: inline-flex;
+    background: #F0F0F0;
+    border-radius: 8px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.toggle-buttons input[type="radio"] {
+    display: none;
+}
+
+.toggle-buttons label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 14px;
+    font-size: 16px;
+    color: #202020;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+.toggle-buttons label:hover {
+    background: #eee;
+}
+
+.toggle-buttons input[type="radio"]:checked + label {
+    background: #fff;
+    border-radius: 4px;
+    // box-shadow: 0 0 0 1px #d0d0d0 inset;
+    // font-weight: 500;
 }
 
 .search-box {
@@ -259,7 +295,8 @@ select {
 }
 
 label.title {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 16px;
     @include primary-font;
 }
 
