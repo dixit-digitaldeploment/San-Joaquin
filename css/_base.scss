@@ -55,14 +55,14 @@ h4,
 .h4 {
     font-size: 21px;
     color: $black;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h5,
 .h5 {
     font-size: 18px;
     color: $black;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: none;
 }
 
@@ -81,7 +81,14 @@ h6,
 .h6 {
     display: block;
 }
-
+.small {
+    font-size: 14px;
+}
+.devider {
+    background: var(--Grayscale-Gray-400, #a0a0a0);
+    margin: 16px 0;
+    height: 1px;
+}
 p {
     line-height: 24px;
     font-size: 16px;
@@ -230,7 +237,7 @@ select {
 
 .toggle-buttons {
     display: inline-flex;
-    background: #F0F0F0;
+    background: #f0f0f0;
     border-radius: 8px;
     padding: 4px;
     overflow: hidden;
