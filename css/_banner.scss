@@ -60,10 +60,10 @@
             color: #fff;
             text-shadow: none;
             margin-bottom: 15px;
-            font-size: 40px;
+            font-size: 76px;
             font-style: normal;
-            font-weight: 700;
-            line-height: 48px;
+            font-weight: 600;
+            // line-height: 48px;
             margin-bottom: 16px;
             // span {
             //     font-size: 36px;
@@ -72,11 +72,12 @@
             // }
         }
         p {
-            font-size: 28px;
+            font-size: 20px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 400;
             line-height: 36px;
             color: $white;
+            max-width: 592px;
         }
         .btn_sm {
             margin-top: 15px;
@@ -165,7 +166,7 @@
 }
 
 .banner-buttons {
-    background: var(--Grayscale-Gray-50, #f8f8f8);
+    background: $secondary;
     position: relative;
     z-index: 2;
     a {
@@ -175,15 +176,15 @@
         }
     }
     .btn_card {
-        padding: 16px;
+        padding: 24px;
         display: flex;
-        border: 1px solid var(--Grayscale-Gray-400, #a0a0a0);
         background: var(--Grayscale-White, #fff);
-        gap: 24px;
+        gap: 16px;
         transform: translateY(-50px);
+        border-radius: 32px;
         .btn_icon {
-            width: 24px;
-            height: 24px;
+            // width: 24px;
+            // height: 24px;
             min-width: 24px;
             min-height: 24px;
             display: flex;
@@ -194,8 +195,8 @@
             // margin-bottom: 16px;
             // margin-right: 16px;
             @include md {
-                width: 24px;
-                height: 24px;
+                // width: 24px;
+                // height: 24px;
                 min-width: 24px;
                 min-height: 24px;
             }
@@ -203,14 +204,14 @@
         .btn_header {
             display: flex;
             align-items: center;
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: 600;
             color: $white;
             font-family: $primary-font;
         }
         p {
             color: $black;
-            font-size: 14px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
             margin: 0;

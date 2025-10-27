@@ -87,11 +87,11 @@ $breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
 }
 
 @mixin primary-font {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 @mixin secondary-font {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 @mixin upper {
@@ -148,26 +148,31 @@ $breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
 }
 
 //Variables
-$primary:#08164E;
-$secondary:#D8790D;
+$primary:#082143;
+$secondary:#1C3557;
+$darkblue:#165083;
+$lightblue:#A4F6FF;
+$blue:#2C7EA6;
+$darkgreen:#388529;
+$green:#74C165;
+$lightgreen:#8ACB8F;
+$lightergreen:#B5EBBC;
+$lightergreen2:#F1FFF8;
+$red:#D60004;
+$red-hover:#C50105;
 $orange:#D8790D;
 $yellow:#ECAF3B;
 $border-color:#D8612E;
-$darkblue:#193369;
-$lightblue:#F0F5FB;
-$red:#D60004;
-$red-hover:#C50105;
-$green:#5B7E15;
 $blue:#004B8F;
 $purple:#7A4090;
 $bg-blue:#14213f;
-$black:#000;
+$black:#202020;
 $white:#ffffff;
 $gray:#555554;
 $lightgray:#F5F5F5;
-$primary-font: 'Inter',
+$primary-font: 'Poppins',
 sans-serif;
-$secondary-font:'DM Sans',
+$secondary-font:'Inter',
 sans-serif;
 $shadow:0px 1px 3px 0px rgba(0, 0, 0, 0.15);
 // color paltte - 
