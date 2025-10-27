@@ -76,7 +76,8 @@
         color: #fff;
         // border-bottom: 1px solid #D8790D;
         // padding-bottom: 6px;
-        margin-bottom: 15px;
+        margin: 15px 0;
+
     }
     .footer-contact {
         margin-bottom: 16px;
@@ -195,7 +196,17 @@
     }
     @media (max-width: 767.98px) {
         .col-md-4 {
-            order: 2;
+            order: 3;
+            &:has(.footer-contact){
+                order: 2;
+                display: flex;
+                h2{
+                    display: none;
+                }
+                >.footer-contact{
+                    width: 33%;
+                }
+            }
             &.logosec {
                 order: 1;
             }
@@ -208,7 +219,7 @@
         }
         .footer-social {
             margin-bottom: 32px !important;
-            justify-content: start;
+            justify-content: center;
         }
     }
 }
