@@ -24,6 +24,7 @@
       padding: 12px;
       display: flex;
       align-items: center;
+      justify-content: center;
       // background: #f8f8f8;
       text-align: center;
       h3 {
@@ -70,6 +71,19 @@
     @include tab {
       width: 50%;
     }
+  }
+}
+
+// after_difference
+.after_difference {
+  .row{
+    margin: 0;
+  }
+  .feat_img {
+    width: 100%;
+  }
+  .content {
+    padding: 40px;
   }
 }
 
@@ -120,13 +134,14 @@
     flex-direction: column;
     align-items: center;
     img {
-      width: 200px;
-      height: 200px;
+      width: auto;
+      height: auto;
       position: relative;
       margin: auto;
-      border-radius: 50%;
+      border-radius: 0;
       position: relative;
-      object-fit: cover;
+      object-fit: none;
+      min-height: 168px;
     }
     p {
       position: relative;
@@ -135,8 +150,8 @@
       margin-top: 16px;
       color: $black;
       text-align: center;
-      font-size: 18px;
-      font-weight: 600;
+      font-size: 20px;
+      font-weight: 400;
     }
   }
 }
@@ -251,8 +266,12 @@
 .NewsMettings {
   padding-top: 80px;
   padding-bottom: 80px;
+  background: $darkblue;
   .top-Title {
-    display: flex;
+    // display: flex;
+    h2 {
+      color: #fff;
+    }
   }
   .btn_sm {
     margin-left: auto;
@@ -262,7 +281,7 @@
     // color: #fff;
   }
   .btn_sm {
-    color: #fff;
+    // color: #fff;
   }
   .news_wrapper {
     display: grid;
@@ -270,13 +289,15 @@
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 24px;
     grid-row-gap: 24px;
+    padding-bottom: 80px;
     .news_content {
       border-radius: 0;
-      border: 1px solid #a0a0a0;
+      border: none;
       box-shadow: none;
       .newsBody {
         padding: 16px;
         h3 {
+          color: #fff;
         }
         .cat-list {
           display: flex;
@@ -285,25 +306,26 @@
           .news_category {
             padding: 8px;
             font-size: 14px;
-            font-weight: 400;
-            border-radius: 16px;
-            background: #f0f0f0;
+            font-weight: 700;
+            // border-radius: 16px;
+            background: transparent;
             line-height: 1;
             margin: 0;
           }
         }
         .date {
           font-size: 14px;
-          font-weight: 400;
+          font-weight: 600;
+          color: #fff;
         }
       }
       &.list {
         > a {
           display: flex;
           .newsimg {
-            max-width: 180px;
+            max-width: 244px;
             img {
-              aspect-ratio: 1/1;
+              aspect-ratio: 3/2;
             }
           }
         }
@@ -344,9 +366,13 @@
   }
 }
 .eventMeetings {
+  background: $secondary;
+  .btnWrapper{
+    padding-top: 80px;
+  }
   .news_content {
     border-radius: 0;
-    border: 1px solid #a0a0a0;
+    // border: 1px solid #a0a0a0;
     box-shadow: none;
     .newsimg {
       img {
@@ -356,16 +382,31 @@
     .newsBody {
       padding: 16px;
       h3 {
-        margin-bottom: 8px;
+        margin-bottom: 14px;
+        color: $white;
       }
       .meta {
         font-size: 14px;
         font-weight: 500;
         color: #000;
+        color: $white;
       }
       .btn_sm {
-        padding: 8px;
-        border-radius: 0;
+        padding: 4px 8px;
+        border-radius: 17px;
+        background: var(--Utility-Colors-for-States-Negative-Red, #d32f2f);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0;
+        margin-left: auto;
+        align-items: center;
+        height: max-content;
+        color: #fff;
+        img{
+          width: 16px;
+        }
       }
     }
   }
@@ -815,7 +856,7 @@
     background-position: center center;
   }
   h2 {
-    // font-weight: 800;
+    font-weight: 500;
   }
   &.text-center {
     margin-bottom: 80px;
@@ -854,6 +895,7 @@
     width: 100%;
     object-fit: cover;
     aspect-ratio: 3/2;
+    border-radius: 40px;
   }
 }
 
@@ -869,9 +911,9 @@ p.date {
 
 .news_content {
   height: 100%;
-  background: $white;
+  // background: $white;
   position: relative;
-  border: 1px solid #a0a0a0;
+  // border: 1px solid #a0a0a0;
   h3 {
     font-size: 24px;
     color: #202020;
@@ -885,11 +927,13 @@ p.date {
     .news_category {
       padding: 8px;
       font-size: 14px;
-      font-weight: 400;
-      border-radius: 16px;
-      background: #f0f0f0;
+      font-weight: 700;
+      border-radius: 0;
+      color: $lightergreen;
+      // background: #f0f0f0;
       line-height: 1;
       margin: 0;
+      border-right: 2px solid $blue;
     }
   }
   .date {
@@ -900,6 +944,7 @@ p.date {
   }
   > a {
     text-decoration: none;
+    background: none;
   }
   &:hover,
   &:focus-within {

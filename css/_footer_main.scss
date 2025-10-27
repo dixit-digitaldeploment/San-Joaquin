@@ -1,9 +1,13 @@
 //footer
 .footer {
-    background: #303030;
+    background: $secondary;
     color: #fff;
-    padding: 40px 0 40px 0;
+    padding: 40px 0px 0;
     font-family: $primary-font;
+    a {
+        background: none;
+        text-decoration: none;
+    }
     .footer_row {
         display: grid;
         grid-template-columns: 1fr 1fr 0.4fr;
@@ -39,7 +43,7 @@
         margin-bottom: 0;
         justify-content: center;
         li {
-            margin-right: 4px;
+            margin-right: 15px;
             &:last-child {
                 margin-right: 0;
             }
@@ -47,16 +51,21 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 35px;
-                height: 35px;
-                background: #fff;
-                border-radius: 100px;
+                width: 30px;
+                height: 30px;
+                // // background: #fff;
+                // border-radius: 100px;
                 transition: background 0.2s;
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(81deg)
+                    brightness(103%) contrast(102%);
                 img {
-                    max-width: 25px;
+                    max-width: 30px;
+                    // width: 30px;
                 }
                 &:hover {
-                    background: #ff7d00;
+                    // background: #ff7d00;
+                    filter: brightness(0) saturate(100%) invert(75%) sepia(19%) saturate(1048%) hue-rotate(64deg)
+                        brightness(89%) contrast(83%);
                 }
             }
         }
@@ -81,7 +90,9 @@
                 color: #fff;
                 font-weight: normal;
                 &:hover {
-                    color: $secondary;
+                    // color: $secondary;
+                    background: none;
+                    text-decoration: underline;
                 }
             }
         }
@@ -111,14 +122,18 @@
     }
     .footer-links {
         li {
-            margin-bottom: 5px;
+            // margin-bottom: 5px;
             a {
                 color: #fff;
                 font-size: 16px;
+                padding: 8px;
+                line-height: 1.4;
+                display: block;
                 // text-decoration: underline;
                 font-weight: normal;
                 &:hover {
-                    color: $secondary;
+                    // color: $secondary;
+                    text-decoration: underline;
                 }
             }
         }
@@ -126,12 +141,51 @@
             // margin-bottom: 0;
         }
         & + h2 {
-            margin-top: 30px;
+            margin-top: 15px;
         }
     }
     .footer-divider {
         // border-top: 1px solid rgba(255, 255, 255, 0.6);
         // margin: 24px 0 20px 0;
+    }
+    .footer-copyright-sec {
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        background: var(--noise, url(<path-to-image>) lightgray 0% 0% / 50px 50px repeat);
+        .footer-copyright {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            color: #1c3557;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            li {
+                padding-right: 16px;
+                border-right: 1px solid $blue;
+                &:last-child{
+                    border: none;
+                    padding-right: 0px;
+                }
+                a {
+                    color: #1C3557;
+                    text-decoration: underline;
+                    &:hover{
+                        
+                    }
+                }
+            }
+        }
     }
     small {
         font-size: 14px;
@@ -148,14 +202,13 @@
         }
         .footer-logo {
             margin-bottom: 15px;
-            text-align: left;
+            text-align: center;
             img {
             }
         }
         .footer-social {
             margin-bottom: 32px !important;
             justify-content: start;
-
         }
     }
 }
