@@ -16,7 +16,7 @@
     .left {
         width: 100%;
     }
-    .logo_wrap{
+    .logo_wrap {
         position: relative;
         // margin-left: 24px;
     }
@@ -55,7 +55,7 @@
         }
     }
     .navbar {
-        padding:0px;
+        padding: 0px;
         .head_wrap {
             display: flex;
             width: 100%;
@@ -124,7 +124,7 @@
         @include flex;
         align-items: center;
         gap: 24px;
-        .btn_sm{
+        .btn_sm {
             background: $lightergreen;
             padding: 8px;
             font-weight: 400;
@@ -556,7 +556,7 @@
 //Header end
 //Responsive header
 @media (max-width: 1199.9px) {
-   .main_header .navbar-brand {
+    .main_header .navbar-brand {
         margin-top: 0;
     }
     .top_header {
@@ -626,11 +626,11 @@
             outline: 0 !important;
             position: absolute;
             right: 0px;
-            top: 15px;
+            top: 25px;
             .icon-bar {
                 width: 25px;
                 height: 4px;
-                background: #000;
+                background: #fff;
                 display: block;
                 margin-bottom: 5px;
                 border-radius: 100px;
