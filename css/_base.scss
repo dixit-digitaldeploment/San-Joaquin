@@ -3,7 +3,7 @@ body {
     color: $black;
     font-size: 16px;
     @include primary-font;
-    background: url(../img/noise.png) lightgray;
+    background: url(../img/noise.png);
     background-size: contain;
     &.wp-admin {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
