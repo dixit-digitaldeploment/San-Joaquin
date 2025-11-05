@@ -4428,6 +4428,10 @@ p.date {
   margin-bottom: 40px;
 }
 
+.main_wrapper > .work-detail {
+  padding: 80px 0;
+}
+
 .commission-members .expanding-grid .expand_img img {
   aspect-ratio: 2/3;
 }
