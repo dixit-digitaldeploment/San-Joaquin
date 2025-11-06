@@ -874,12 +874,12 @@ h2 + .expand_img_grid {
     .owl-next {
       right: 24px;
       border-radius: 50%;
-      img {
-        @include rotate;
-      }
     }
     .owl-prev {
       left: 24px;
+      img {
+        @include rotate;
+      }
     }
   }
   .owl-stage-outer {
@@ -1251,11 +1251,11 @@ h2 + .expand_img_grid {
 // ===== Kadence accordion Ends =====
 // ===== Kadence Tabs  Starts =====
 .wp-block-kadence-tabs {
- max-width: 900px !important;
+  max-width: 900px !important;
   &.alignwide {
     max-width: 1200px !important;
   }
-  &.alignfull{
+  &.alignfull {
     max-width: 100% !important;
   }
   .kt-tabs-wrap {
@@ -1296,7 +1296,7 @@ h2 + .expand_img_grid {
         position: relative;
         overflow: visible !important;
         border: 0 !important;
-        border-bottom:2px solid transparent !important;
+        border-bottom: 2px solid transparent !important;
         padding: 4px 12px !important;
         border-radius: 0px !important;
         background: none !important;
@@ -1312,7 +1312,7 @@ h2 + .expand_img_grid {
         @include md {
         }
         &:hover {
-          background: #8ACB8F !important;
+          background: #8acb8f !important;
           color: $black !important;
           p {
             color: $black !important;
@@ -1322,8 +1322,8 @@ h2 + .expand_img_grid {
       &.kt-tab-title-active {
         .kt-tab-title {
           color: $black !important;
-          background: #74C165 !important;
-          border-bottom:2px solid $black !important;
+          background: #74c165 !important;
+          border-bottom: 2px solid $black !important;
           p {
             color: $black !important;
           }
@@ -1426,15 +1426,15 @@ h2 + .expand_img_grid {
   width: 100%;
   thead {
     th {
-      background: #1C3557;
-      font-family:$primary-font;
+      background: #1c3557;
+      font-family: $primary-font;
       font-weight: 600;
       font-size: 16px;
       color: #fff;
       padding: 16px !important;
-      border-right: 1px solid #A0A0A0;
+      border-right: 1px solid #a0a0a0;
       p {
-        font-family:$primary-font;
+        font-family: $primary-font;
         font-weight: 600;
         font-size: 16px;
         color: #fff;
@@ -1452,18 +1452,18 @@ h2 + .expand_img_grid {
   tbody {
     td {
       padding: 16px !important;
-      background: #F8F8F8;
+      background: #f8f8f8;
       border-right: 1px solid #a0a0a0;
       border-bottom: 1px solid #a0a0a0;
       p {
         margin: 0px;
       }
-      &:first-child{
+      &:first-child {
         background: #165083;
         color: #fff;
         font-weight: 600;
         font-size: 16px;
-        p{
+        p {
           color: #fff;
           font-weight: 600;
           font-size: 16px;
@@ -2387,6 +2387,124 @@ h2 + .expand_img_grid {
   .even.timeline-article .content-left-container .content-left {
     // max-width: 330px;
     margin-left: 0;
+  }
+}
+
+#conference-timeline {
+  &.noImg {
+    .conference-center-line {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      top: 0px;
+      left: 0%;
+      margin-left: -2px;
+      background: #2c7ea6;
+      border-radius: 10px;
+      z-index: 0;
+    }
+    .conference-timeline-content {
+      position: relative;
+      .timeline-article {
+        padding-left: 40px;
+        overflow: visible;
+        .timeline-level-one {
+          overflow: visible;
+          align-items: flex-start;
+        }
+        .circle_yw {
+          position: absolute;
+          top: 5px;
+          left: -45px;
+          width: 36px;
+          height: 36px;
+          margin-left: -9px;
+          color: #fff;
+          // background: #2c7ea6;
+          // position: relative;
+          transform: unset;
+          display: flex;
+          width: 25px;
+          border: 1px solid #fff;
+          height: 25px;
+          border-radius: 50%;
+          &::after {
+            content: "";
+            width: 36px;
+            height: 36px;
+            border-radius: 0;
+            padding: 2px;
+            right: -7px;
+            position: absolute;
+            z-index: -1;
+          }
+          &::before {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.7828 5.21836C17.0766 5.51211 17.0766 5.98711 16.7828 6.27773L8.53281 14.5309C8.23906 14.8246 7.76406 14.8246 7.47344 14.5309L3.22031 10.2809C2.92656 9.98711 2.92656 9.51211 3.22031 9.22148C3.51406 8.93086 3.98906 8.92773 4.27969 9.22148L7.99844 12.9402L15.7203 5.21836C16.0141 4.92461 16.4891 4.92461 16.7797 5.21836H16.7828Z" fill="white"/></svg>');
+            position: relative;
+            background: none;
+            z-index: 0;
+            width: 18px;
+            height: 18px;
+            left: 0;
+          }
+        }
+        .content {
+          h3 {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+          }
+          .year {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+        &.working {
+          .circle_yw {
+            &::before {
+              content: "";
+              position: relative;
+              background: none;
+              z-index: 0;
+              width: 18px;
+              height: 18px;
+              background: #fff;
+              border-radius: 50%;
+              left: 0;
+            }
+          }
+        }
+        &.not_done {
+          .circle_yw {
+            &::before {
+              content: "";
+              position: relative;
+              background: none;
+              z-index: 0;
+              width: 18px;
+              height: 18px;
+              background: #165083;
+              border-radius: 50%;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 800px) {
+      .conference-center-line {
+        left: 15px;
+      }
+      .conference-timeline-content {
+        .timeline-article {
+          padding-left: 10px;
+          .circle_yw {
+            left: 0px;
+          }
+        }
+      }
+    }
   }
 }
 // timeline End
